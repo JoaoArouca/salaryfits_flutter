@@ -13,21 +13,21 @@ class CustomCard extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       margin: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        border: Border.all(width: 1, color: Colors.black12),
-        borderRadius: BorderRadius.circular(5),
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            spreadRadius: 3,
-            blurRadius: 7,
-            offset: const Offset(0,3),
-          ),
-        ]
-      ),
+          border: Border.all(width: 1, color: Colors.black12),
+          borderRadius: BorderRadius.circular(5),
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 3,
+              blurRadius: 7,
+              offset: const Offset(0, 3),
+            ),
+          ]),
       child: Column(
-        children: [
-          Container( // Título
+        children: <Widget>[
+          Container(
+            // Título
             margin: const EdgeInsets.only(bottom: 20),
             alignment: Alignment.center,
             child: Text(
@@ -39,18 +39,16 @@ class CustomCard extends StatelessWidget {
               ),
             ),
           ),
-          Container( // Subtítulo
-              padding: const EdgeInsets.all(10),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                subtitle,
+          Container(
+            // Subtítulo
+            padding: const EdgeInsets.all(10),
+            alignment: Alignment.centerLeft,
+            child: Text(subtitle,
                 style: const TextStyle(
-                  fontWeight: FontWeight.normal,
-                  fontSize: 15,
-                  color: Color(0xFF656b89)
-                )
-              ),
-          ),
+                    fontWeight: FontWeight.normal,
+                    fontSize: 15,
+                    color: Color(0xFF656b89))),
+          )
         ],
       ),
     );

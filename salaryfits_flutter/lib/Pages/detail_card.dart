@@ -19,7 +19,14 @@ class DetailPage extends StatelessWidget {
   }
 
   _body(context, data) {
-    return CustomCard(data!['title'], data!['body']);
+    return Column(
+        children: [
+          CustomCard(
+              data!['title'],
+              data!['body']
+          ),
+
+        ]);
   }
 
   _logo() => Container(
