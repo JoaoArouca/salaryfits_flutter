@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:salaryfits_flutter/Components/app_bar.dart';
 import 'package:salaryfits_flutter/Components/card.dart';
 import 'package:salaryfits_flutter/utils/get_data.dart';
 
@@ -13,19 +14,19 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 5,
-        leading: _logo(),
-        leadingWidth: 100,
-        centerTitle: true,
-      ),
+      // appBar: AppBar(
+      //   elevation: 5,
+      //   title: _logo(),
+      //   centerTitle: true,
+      // ),
+      appBar: AppBarCustom(_logo()),
       body: _body(),
     );
   }
 
   _logo() => Container(
         padding: const EdgeInsets.all(10),
-        child: Image.asset('lib/assets/images/logo.png'),
+        child: Image.asset('lib/assets/images/logo.png', width: 100),
       );
 
   _body() {
