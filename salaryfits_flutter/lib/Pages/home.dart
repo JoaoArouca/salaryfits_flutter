@@ -14,7 +14,6 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         elevation: 5,
-        // title: const Text('Salary Fits - Flutter'),
         leading: _logo(),
         leadingWidth: 100,
 
@@ -60,10 +59,15 @@ class _HomeState extends State<Home> {
           return ListView.builder( // Card
             itemCount: snapshot.data!.length,
             itemBuilder: (context, index) {
-              return ListTile(
-                leading: Text(snapshot.data![index]['id'].toString()),
-                title: Text(snapshot.data![index]['title']),
-                subtitle: Text(snapshot.data![index]['body']),
+              return GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, 'detail_card', arguments: snapshot.data![index]);
+                },
+                child: ListTile(
+                  leading: Text(snapshot.data![index]['id'].toString()),
+                  title: Text(snapshot.data![index]['title']),
+                  subtitle: Text(snapshot.data![index]['body']),
+                ),
               );
             });
         }
