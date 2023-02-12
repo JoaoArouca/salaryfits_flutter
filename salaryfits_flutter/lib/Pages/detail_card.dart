@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:salaryfits_flutter/Components/app_bar.dart';
 
 // class Data {
 //   final int userId;
@@ -19,21 +20,7 @@ class DetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final data = ModalRoute.of(context)?.settings.arguments;
     return Scaffold(
-      appBar: AppBar(
-        title: _logo(),
-        centerTitle: true,
-        elevation: 5,
-        leading: Builder(
-          builder: (context) {
-            return InkWell(
-              onTap: () {
-                Navigator.of(context).pop();
-              },
-              child: const Icon(Icons.arrow_back_ios, color: Color(0xFFF5C600)),
-            );
-          },
-        ),
-      ),
+      appBar: AppBarCustom(_logo()),
       body: _body(context, data),
     );
 
