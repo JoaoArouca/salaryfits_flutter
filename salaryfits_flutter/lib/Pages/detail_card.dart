@@ -1,15 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:salaryfits_flutter/Components/app_bar.dart';
-
-// class Data {
-//   final int userId;
-//   final int id;
-//   final String title;
-//   final String body;
-//
-//   Data(this.userId, this.id, this.title, this.body);
-// }
+import 'package:salaryfits_flutter/Components/card.dart';
 
 class DetailPage extends StatelessWidget {
   static const routeName = 'detail_card';
@@ -28,10 +19,7 @@ class DetailPage extends StatelessWidget {
   }
 
   _body(context, data) {
-    return ListTile(
-      title: Text(data!['title']),
-      subtitle: Text(data!['body']),
-    );
+    return CustomCard(data!['title'], data!['body']);
   }
 
   _logo() => Container(

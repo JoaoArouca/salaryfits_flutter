@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:salaryfits_flutter/Components/card.dart';
 import 'package:salaryfits_flutter/utils/get_data.dart';
 
 class Home extends StatefulWidget {
@@ -63,11 +64,7 @@ class _HomeState extends State<Home> {
                 onTap: () {
                   Navigator.pushNamed(context, 'detail_card', arguments: snapshot.data![index]);
                 },
-                child: ListTile(
-                  leading: Text(snapshot.data![index]['id'].toString()),
-                  title: Text(snapshot.data![index]['title']),
-                  subtitle: Text(snapshot.data![index]['body']),
-                ),
+                child: CustomCard(snapshot.data![index]['title'], snapshot.data![index]['body']),
               );
             });
         }
