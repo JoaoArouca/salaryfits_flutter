@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "604367160297",
+    "project_id": "salaryfits-ps",
+    "storage_bucket": "salaryfits-ps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604367160297:android:3d37f7db849f521d59c178",
+        "android_client_info": {
+          "package_name": "com.example.salaryfits_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "604367160297-ii0pej2jh3bjcr23bftprid8nkedku81.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5R1AJEZJwBlxEbb5kZBmRS6-A87VC8lw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "604367160297-ii0pej2jh3bjcr23bftprid8nkedku81.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

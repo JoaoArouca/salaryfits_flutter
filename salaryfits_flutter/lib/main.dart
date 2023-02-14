@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:salaryfits_flutter/Pages/detail_card.dart';
 import 'package:salaryfits_flutter/Pages/home.dart';
 
-
 void main() {
   runApp(const App());
 }
@@ -17,7 +16,8 @@ class App extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const Home(),
-        DetailPage.routeName: (context) => const DetailPage(), // rota nomeada com parâmetros
+        DetailPage.routeName: (context) =>
+            const DetailPage(), // rota nomeada com parâmetros
       },
       theme: ThemeData(
         primaryColor: const Color(0xFFF5C600),
